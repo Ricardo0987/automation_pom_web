@@ -76,3 +76,4 @@ local.properties
 ### Sonar ###
 #Sonar generated dir
 /.sonar/
+.DS_Store
