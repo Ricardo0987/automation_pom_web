@@ -51,8 +51,8 @@ in `Runner` you can select the different Tags to run separate test cases or the 
    - Sort products by price
    - Add products to the cart
    - Remove products from the cart
-   - Complete checkout
-      - Thank you pageAuthCases
+   - Complete checkout 
+   - Thank you page
 
    > NOTE: You can use any framework or language to complete the task https://nightwatchjs.org/, https://webdriver.io/, https://jestjs.io/, etc.
    Also you can use any assertion library like https://www.chaijs.com/.
