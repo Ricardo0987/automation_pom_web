@@ -1,5 +1,5 @@
 @AuthCases @AllCases
-Feature: authentication on the page https://www.saucedemo.com/
+Feature: authentication
 
   @TestCase_1
   Scenario Outline:  I should be able to log in to the application with the correct credentials.
