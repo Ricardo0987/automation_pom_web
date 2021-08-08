@@ -10,6 +10,12 @@ public class CartPage extends PageObject {
     private WebElementFacade fistItemCart;
     @FindBy(xpath = "//*[@data-test='continue-shopping']")
     private WebElementFacade continueShoppingBtn;
+    @FindBy(xpath = "//*[@data-test='checkout']")
+    private WebElementFacade checkoutBtn;
+
+    public WebElementFacade getCheckoutBtn() {
+        return checkoutBtn;
+    }
 
     public WebElementFacade getContinueShoppingBtn() {
         return continueShoppingBtn;
