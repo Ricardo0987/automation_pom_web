@@ -1,5 +1,5 @@
 @ProductCases @AllCases
-Feature: Products page
+Feature: Products
 
   Background:
     Given I am on the site
