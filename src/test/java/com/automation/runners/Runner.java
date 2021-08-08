@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         features = "src/test/resources/features/",
-        tags = {"@TestCase_8"},
+        tags = {"@AllCases"},
         glue = {"com.automation.definitions"},
         snippets = SnippetType.CAMELCASE,
         monochrome = true,
