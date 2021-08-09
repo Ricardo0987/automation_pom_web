@@ -1,0 +1,10 @@
+serenity.project.name = automation web
+
+webdriver.wait.for.timeout = 10000
+serenity.resized.image.width = 300
+serenity.take.screenshots = AFTER_EACH_STEP
+
+webdriver.driver=remote
+webdriver.remote.driver=chrome
+webdriver.remote.url=http://127.0.0.1:4444/wd/hub
+webdriver.timeouts.implicitlywait=10000

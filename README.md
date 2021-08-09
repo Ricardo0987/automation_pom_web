@@ -14,6 +14,7 @@ in console:
 ```bash
 gradle clean test aggregate
 ```
+path of the generated report: `target/site/serenity`
 
 in `Runner` you can select the different Tags to run separate test cases or the entire test set:
 
@@ -99,3 +100,14 @@ bugs found, we’ll appreciate to see an invented bug reported), it is also impo
 
 ***NOTE: The algorithm problem (second part) is not a priority, please complete the first part, and solve the algorithm
 problem if you have time to spare.***
+
+
+## 🚀🚀🚀 Run all with docker 🚀🚀🚀
+
+install `docker` and `docker-compose`
+
+run `docker-compose up`
+
+then open `http://localhost:8000/` for `2. Bonus: Algorithm Problem.`
+
+when finish gradle container open `./target/site/serenity/index.html` for `1. Technical - Automated Test.`

@@ -1,0 +1,46 @@
+#using docker command: docker run --rm --network host -u gradle -v "$PWD":/home/gradle/project -w /home/gradle/project gradle:6.7 gradle clean test aggregate -Dcucumber.options="--tags @AllCases"
+#using docker compose command: docker-compose up
+
+version: "3"
+services:
+  #Nginx Service
+  webserver:
+    image: nginx
+    container_name: webserver
+    volumes:
+      - "./algorithm/:/usr/share/nginx/html"
+    ports:
+      - "8000:80"
+
+  gradle:
+    image: gradle:6.7
+    network_mode: "host"
+    container_name: gradle
+    working_dir: /home/gradle/project
+    volumes:
+      - "./:/home/gradle/project"
+      - "./serenity.propertiesDocker:/home/gradle/project/serenity.properties"
+    command: gradle clean test aggregate -Dcucumber.options="--tags @${TARGET}"
+    depends_on:
+      - chrome
+
+  selenium-hub:
+    image: selenium/hub:3.141.59-bismuth
+    container_name: selenium-hub
+    ports:
+      - "4444:4444"
+
+  chrome:
+    image: selenium/node-chrome:3.141.59-bismuth
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+#  firefox:
+#    image: selenium/node-firefox:3.141.59-bismuth
+#    depends_on:
+#      - selenium-hub
+#    environment:
+#      - HUB_HOST=selenium-hub
+#      - HUB_PORT=4444
