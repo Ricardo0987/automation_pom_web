@@ -6,6 +6,11 @@
 
 This repository contains web test. Using POM (Page Object Model) design pattern.
 
+> Documentation path: `./Design and Execution`
+> - saucedemo TestPlan.pdf
+> - saucedemo TestCases.xlsx
+> - example report.zip
+> - example report with fails.zip
 
 ## Execution 🚀
 ---
